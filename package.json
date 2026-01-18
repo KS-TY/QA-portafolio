@@ -10,6 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/KS-TY/QA-portafolio.git"
   },
+  "keywords": [],
   "author": "Juan David Castillo Laverde",
   "license": "ISC",
   "bugs": {
