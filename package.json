@@ -1,0 +1,22 @@
+{
+  "name": "qa-portafolio",
+  "version": "1.0.0",
+  "description": "Ingeniero de Sistemas en formación con enfoque en Quality Assurance (QA) y Software Testing.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KS-TY/QA-portafolio.git"
+  },
+  "author": "Juan David Castillo Laverde",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KS-TY/QA-portafolio/issues"
+  },
+  "homepage": "https://github.com/KS-TY/QA-portafolio#readme",
+  "devDependencies": {
+    "cypress": "^15.9.0"
+  }
+}
