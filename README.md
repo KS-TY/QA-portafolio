@@ -1,6 +1,6 @@
 # QA Portfolio — Manual, API and Automation Testing
 
-[![CI status](https://github.com/KS-TY/QA-portafolio/actions/workflows/ci.yml/badge.svg)](https://github.com/KS-TY/QA-portafolio/actions/workflows/ci.yml)
+[![CI status](https://github.com/KS-TY/![alt text](image.png)QA-portafolio/actions/workflows/ci.yml/badge.svg)](https://github.com/KS-TY/QA-portafolio/actions/workflows/ci.yml)
 
 Short description
 -----------------
