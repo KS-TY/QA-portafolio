@@ -1,5 +1,7 @@
 # QA Portfolio — Manual, API and Automation Testing
 
+[![CI status](https://github.com/KS-TY/QA-portafolio/actions/workflows/ci.yml/badge.svg)](https://github.com/KS-TY/QA-portafolio/actions/workflows/ci.yml)
+
 Short description
 -----------------
 
@@ -8,7 +10,7 @@ This repository contains a QA portfolio with practical evidence of Manual Testin
 About me
 --------
 
-Systems Engineering student interested in Quality Assurance and Software Testing. I work on functional testing, API testing and automation to help ensure software stability and quality.
+Systems Engineer interested in Quality Assurance and Software Testing. I work on functional testing, API testing and automation to help ensure software stability and quality.
 
 Project structure
 -----------------
@@ -86,9 +88,5 @@ Show practical skills in:
 Contact
 -------
 
-If you want suggestions, improvements or additional automated scenarios, open an issue or send a message.
+If you want suggestions, improvements or additional automated scenarios, send a message.
 
---
-Updated to improve clarity and structure (English version).
---
-Actualizado para mejorar legibilidad y estructura.
