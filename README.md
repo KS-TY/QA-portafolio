@@ -1,92 +1,195 @@
-# QA Portfolio — Manual, API and Automation Testing
+# QA Portfolio — Manual, API, Automation and Performance Testing
 
-[![CI status](https://github.com/KS-TY/![alt text](image.png)QA-portafolio/actions/workflows/ci.yml/badge.svg)](https://github.com/KS-TY/QA-portafolio/actions/workflows/ci.yml)
+[![CI status](https://github.com/KS-TY/QA-portafolio/actions/workflows/ci.yml/badge.svg)](https://github.com/KS-TY/QA-portafolio/actions/workflows/ci.yml)
 
-Short description
------------------
+## Short description
 
-This repository contains a QA portfolio with practical evidence of Manual Testing, API Testing (Postman) and Test Automation (Cypress). The purpose is to showcase test plan design, test case creation, execution, bug reporting, and automation of end-to-end scenarios on real applications and public APIs.
+This repository contains a QA portfolio with practical evidence of:
 
-About me
---------
+* Manual Testing
+* API Testing (Postman)
+* Test Automation (Cypress)
+* **Performance Testing (k6)**
 
-Systems Engineer interested in Quality Assurance and Software Testing. I work on functional testing, API testing and automation to help ensure software stability and quality.
+The purpose is to showcase test design, execution, bug reporting, automation, and system behavior under different load conditions.
 
-Project structure
------------------
+---
 
-- `manual-testing/`
-	- `test-plan/` — Test plan (SauceDemo)
-	- `test-cases/` — Manual test cases
-	- `test-execution/` — Execution results
-	- `bug-reports/` — Bug reports with evidence
+## About me
 
-- `api-testing/`
-	- `postman/` — Postman collections and API tests
-	- `reports/` — API test reports
+Systems Engineer focused on Quality Assurance and Software Testing.
+Experience in functional testing, API validation, automation, and performance testing to ensure system reliability and scalability.
 
-- `cypress/` — End-to-end tests with Cypress
-	- `e2e/` — Test specs
-	- `fixtures/`, `support/` — Cypress resources
+---
 
-- `cypress.config.js` — Cypress configuration
+## Project structure
 
-Main sections
--------------
+* `manual-testing/`
 
-1. Manual testing
-	 - Based on the SauceDemo web application.
-	 - Includes test plan, detailed test cases, execution results and bug reports with screenshots.
+  * `test-plan/` — Test plan (SauceDemo)
+  * `test-cases/` — Manual test cases
+  * `test-execution/` — Execution results
+  * `bug-reports/` — Bug reports with evidence
 
-2. API testing
-	 - Uses the public FakeStore API and Postman collection.
-	 - Tests include: list products, get product by ID, login and token validation.
-	 - Common checks: status codes and JSON structure.
+* `api-testing/`
 
-3. Automation
-	 - Framework: Cypress for end-to-end automation.
-	 - Included scenarios: successful login, error handling for invalid credentials.
-	 - Additional scenarios can be added as the project grows.
+  * `postman/` — Postman collections
+  * `reports/` — API reports
 
-How to run automation tests
----------------------------
+* `cypress/` — End-to-end automation
 
-1. Install dependencies:
+  * `e2e/`, `fixtures/`, `support/`
+
+* `performance-testing/`
+
+  * `k6/`
+
+    * `basic-load-test.js`
+    * `stress-test.js`
+    * `spike-test.js`
+    * `soak-test.js`
+    * `config.js`
+    * `thresholds.js`
+
+* `cypress.config.js`
+
+---
+
+## Main sections
+
+### 1. Manual testing
+
+* Based on SauceDemo web application
+* Includes:
+
+  * Test plan
+  * Test cases
+  * Execution results
+  * Bug reports with evidence
+
+---
+
+### 2. API testing
+
+* Uses FakeStore API with Postman
+* Scenarios:
+
+  * Get products
+  * Get product by ID
+  * Login
+* Validations:
+
+  * Status codes
+  * JSON structure
+
+---
+
+### 3. Automation
+
+* Framework: Cypress
+* Scenarios:
+
+  * Successful login
+  * Invalid credentials
+* Focus on end-to-end flows
+
+---
+
+### 4. Performance testing (k6)
+
+Performance tests were executed against the FakeStore API to evaluate system behavior under different load conditions.
+
+#### Test types
+
+* **Load Test**
+
+  * Simulates normal user traffic
+  * Result: Stable response times (~200–250ms), 0% errors
+
+* **Stress Test**
+
+  * Gradually increases load
+  * Result: System remains stable up to ~400 virtual users
+
+* **Spike Test**
+
+  * Sudden traffic peaks
+  * Result: System handles spikes without failures
+
+* **Soak Test**
+
+  * Sustained load over time
+  * Result: No performance degradation detected
+
+---
+
+#### Breaking point analysis
+
+Under extreme load conditions (1000–2000 virtual users):
+
+* Request timeouts observed
+* Connections closed by server
+* Increased latency
+
+**Conclusion:**
+The system is stable under normal and moderate load but does not scale efficiently under extreme concurrency.
+
+---
+
+#### Metrics evaluated
+
+* Response time (p95 < 1s)
+* Error rate (< 5%)
+* Throughput (requests per second)
+
+---
+
+## How to run tests
+
+### Cypress (automation)
 
 ```bash
 npm install
-```
-
-2. Open Cypress (interactive mode):
-
-```bash
 npx cypress open
 ```
 
+### k6 (performance)
 
+```bash
+k6 run performance-testing/k6/basic-load-test.js
+k6 run performance-testing/k6/stress-test.js
+k6 run performance-testing/k6/spike-test.js
+k6 run performance-testing/k6/soak-test.js
+```
 
-Tools used
-----------
+> Each performance test is executed independently to ensure accurate and reliable metrics.
 
-- Manual testing
-- Postman (API testing)
-- Cypress (automation)
-- JavaScript
-- Git and GitHub
+---
 
-Portfolio purpose
------------------
+## Tools used
 
-Show practical skills in:
+* Manual testing
+* Postman
+* Cypress
+* k6
+* JavaScript
+* Git & GitHub
 
-- Designing test plans and test cases
-- Executing and documenting tests
-- Reporting bugs with evidence
-- Validating APIs
-- Automating end-to-end flows
+---
 
-Contact
--------
+## Portfolio purpose
 
-If you want suggestions, improvements or additional automated scenarios, send a message.
+Demonstrate practical skills in:
 
+* Test design and execution
+* Bug reporting
+* API validation
+* Test automation
+* **Performance and scalability analysis**
+
+---
+
+## Contact
+
+juancasl2015@gmail.com
+Open to feedback, improvements, and collaboration opportunities.
